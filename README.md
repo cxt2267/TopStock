@@ -14,7 +14,7 @@ This is a **Stock Ranking** web application built using **Angular** with a **Dja
 
 - **Frontend:** Angular, Angular Material
 - **Backend:** Django (REST API)
-- **Database:** MongoDB (NoSQL)
+- **Database:** DynamoDB (NoSQL)
 - **Hosting:** AWS
 - **Stock API:** Finnhub API.
 
