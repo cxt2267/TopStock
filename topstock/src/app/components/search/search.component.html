@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card">
+      <h2>Search for Stocks</h2>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Stock Symbol or Company Name</mat-label>
+        <input matInput placeholder="Enter symbol or name" [(ngModel)]="query">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="search()">Search</button>
+    </div>
+  
+    <div *ngIf="results.length > 0">
+      <div *ngFor="let stock of results" class="card stock-card">
+        <div>
+          <h3>{{ stock.symbol }} - {{ stock.name }}</h3>
+          <p>Price: ${{ stock.price }}</p>
+        </div>
+        <div class="stock-metrics">
+          <p>Change: {{ stock.change }}%</p>
+          <p>Volume: {{ stock.volume }}</p>
+        </div>
+      </div>
+    </div>
+</div>

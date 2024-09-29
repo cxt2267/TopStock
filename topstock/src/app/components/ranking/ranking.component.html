@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card">
+      <h2>Top Stock Rankings</h2>
+  
+      <mat-tab-group>
+        <mat-tab label="Short-Term Investments">
+          <div *ngFor="let stock of shortTermRankings" class="card stock-card">
+            <h3>{{ stock.symbol }} - {{ stock.name }}</h3>
+            <div class="stock-metrics">
+              <p>Price: ${{ stock.price }}</p>
+              <p>Change: {{ stock.change }}%</p>
+              <p>Rank: {{ stock.rank }}</p>
+            </div>
+          </div>
+        </mat-tab>
+        
+        <mat-tab label="Long-Term Investments">
+          <div *ngFor="let stock of longTermRankings" class="card stock-card">
+            <h3>{{ stock.symbol }} - {{ stock.name }}</h3>
+            <div class="stock-metrics">
+              <p>Price: ${{ stock.price }}</p>
+              <p>Change: {{ stock.change }}%</p>
+              <p>Rank: {{ stock.rank }}</p>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+</div>

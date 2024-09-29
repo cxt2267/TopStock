@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card">
+      <h2>{{ stockDetails.symbol }} - {{ stockDetails.name }}</h2>
+      <p>Price: ${{ stockDetails.price }}</p>
+      <p>52-Week High: ${{ stockDetails.high52Week }}</p>
+      <p>52-Week Low: ${{ stockDetails.low52Week }}</p>
+  
+      <h3>Fundamental Analysis</h3>
+      <p>Earnings Per Share (EPS): {{ stockDetails.eps }}</p>
+      <p>Price to Earnings (P/E) Ratio: {{ stockDetails.peRatio }}</p>
+  
+      <h3>Technical Analysis</h3>
+      <div class="stock-chart">
+        <!-- chartjs -->
+      </div>
+  
+      <h3>Sentiment Analysis</h3>
+      <p>{{ stockDetails.sentiment }}</p>
+    </div>
+</div>
